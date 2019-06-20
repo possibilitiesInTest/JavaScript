@@ -63,3 +63,79 @@ const {calories, ...everythingButCals} = updatedMeal2;
 console.log(everythingButCals);
 
 ///////////////////////////////////////////////////////
+// Map && Filter
+
+const meals = [
+    { id: 1, description: 'Breakfast', calories: 420},
+    { id: 2, description: 'Lunch', calores: 250}
+];
+
+const meal = {
+    id: 3,
+    description: 'Snack',
+    calories: 180
+};
+
+const updatedMeals = [...meals, meal];
+
+// console.log(meals, updatedMeals);
+
+const updatedMealsDescription = updatedMeals.map(updateDescription);
+
+function updateDescription(meal) {
+    if (meal.id === 2) {
+        return {
+            ...meal,
+            description: 'Early Lunch',
+        };
+    }
+    return meal;
+}
+
+// console.log(updatedMealDescription);
+
+const filteredMeals = updatedMeals.filter(function(meal){
+    return meal.id !== 1;
+});
+
+console.log(updatedMealsDescription, filteredMeals);
+
+///////////////////////////////////////////////////
+// Map && Filter
+
+// 1. create a constant named friends,
+// which is an array that contains 2
+// names of your choosing.
+const friends = [ "Charlie", "Kat"];
+
+
+// 2. Create a new constant named updatedFriends,
+// which includes the friends array values plus
+// one additional name
+const updatedFriends = [ ...friends, "Bob"];
+
+// 3. Create a new constant named friendNameLengths,
+// which is based on the array updatedFriends,
+// but instead of having the friends names,
+// have the array store the length of each persons name.
+const friendNameLengths = updatedFriends.map(nameLength);
+
+function nameLength(name) {
+    return name.length;
+}
+
+
+// 4. Create a new constant named shorterNamedFriends,
+// which will be a list of the friends except the friend with the longest name.
+const longestNameLength = Math.max(...friendNameLengths);
+
+
+const shorterNamedFriends = updatedFriends.filter(
+    function(friend){
+        return friend.length < longestNameLength;
+    })
+
+
+// 5. Print each variable to the console.
+console.log(friends, updatedFriends, friendNameLengths, shorterNamedFriends);
+
