@@ -26,8 +26,16 @@ function update(msg, model) {
     }
 }
 
+// impure code below
 
+function app(initModel, update, view, node){
+    let model = initModel;
+    let currentView = view(model);
+    node.appendChild(currentView);
+}
 
 const rootNode = document.getElementById('app');
 
-rootNode.appendChild(view(update('plus', initModel)));
+app(initModel, update, view, rootNode);
+
+// rootNode.appendChild(view(update('plus', initModel)));
