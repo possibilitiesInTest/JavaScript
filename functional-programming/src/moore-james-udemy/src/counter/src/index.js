@@ -7,11 +7,12 @@ const initModel = 0;
 
 function view(model) {
         return div([
-            div(`Count: ${model}`),
-            button('+'),
-            button('-')
+            div({ className: 'mv2' },`Count: ${model}`),
+            button({ className: 'pv1 ph2 mr2' },'+'),
+            button({ className: 'pv1 ps2'}, '-')
         ]);
 }
+
 
 const rootNode = document.getElementById('app');
 
