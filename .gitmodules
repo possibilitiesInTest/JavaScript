@@ -1,3 +1,6 @@
 [submodule "AlgoCasts_local"]
 	path = AlgoCasts_local
 	url = https://github.com/StephenGrider/AlgoCasts.git
+[submodule "AlgoCasts_3"]
+	path = AlgoCasts_3
+	url = https://github.com/StephenGrider/AlgoCasts.git
