@@ -29,9 +29,7 @@ function capitalize(str){
             result += str[i]
         }
     }
-
     return result;
-
 }
 
 
