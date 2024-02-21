@@ -1,17 +1,93 @@
-class App {
-    constructor() {
-        this.serverName = 'localhost';
-
-        document.querySelector('button').addEventListener('Click', this.getServerName.bind(this));
+class Person {
+    constructor (firstName, lastName) {
+        this._firstName = firstName;
+        this._lastName = lastName;
     }
 
-    getServerName() {
-        console.log(this.serverName);
+    get firstName() {
+        // return this._firstName.charAt(0).toUpperCase() + this._firstName.slice(1);
+        return this.captializeFirst(this._firstName);
+    }
+
+    set firstName(value) {
+        this._firstName = value.charAt(0).toUpperCase() + value.slice(1);
+    }
+
+    get lastName() {
+        // return this._firstName.charAt(0).toUpperCase() + this._firstName.slice(1);
+        return this.captializeFirst(this._lastName);
+    }
+
+    set lastName(value) {
+        this._lastName = value.charAt(0).toUpperCase() + value.slice(1);
+    }
+
+    captializeFirst(value) {
+        return value.charAt(0).toUpperCase() + value.slice(1);
+    }
+
+    get fullName() {
+        return `${this.firstName} ${this._lastName}`;
     }
 }
 
-const app = new App();
-// app.getServerName();
+
+const person1 = new Person('john', 'doe');
+console.log(person1.firstName);
+console.log(person1.lastName);
+
+
+person1.firstName = 'joseph';
+person1.lastName = 'smith';
+console.log(person1);
+console.log(person1.fullName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class App {
+//     constructor() {
+//         this.serverName = 'localhost';
+
+//         document.querySelector('button').addEventListener('Click', this.getServerName.bind(this));
+//     }
+
+//     getServerName() {
+//         console.log(this.serverName);
+//     }
+// }
+
+// const app = new App();
+// // app.getServerName();
 
 
 
