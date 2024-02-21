@@ -1,23 +1,73 @@
-class Rectangle {
-    constructor(name, height, width) {
-        this.name = name;
-        this.height = height;
-        this.width = width;
+class App {
+    constructor() {
+        this.serverName = 'localhost';
+
+        document.querySelector('button').addEventListener('Click', this.getServerName.bind(this));
     }
 
-    area() {
-        return this.height * this.width;
-    }
-
-    static getClass() {
-        return 'Rectangle';
+    getServerName() {
+        console.log(this.serverName);
     }
 }
 
+const app = new App();
+// app.getServerName();
 
-const rect = new Rectangle('Rect', 10, 10);
-console.log(rect.area());
-console.log(Rectangle.getClass());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Rectangle {
+//     constructor(name, height, width) {
+//         this.name = name;
+//         this.height = height;
+//         this.width = width;
+//     }
+
+//     area() {
+//         return this.height * this.width;
+//     }
+
+//     static getClass() {
+//         return 'Rectangle';
+//     }
+// }
+
+
+// const rect = new Rectangle('Rect', 10, 10);
+// console.log(rect.area());
+// console.log(Rectangle.getClass());
 
 
 
