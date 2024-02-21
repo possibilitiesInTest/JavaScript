@@ -1,48 +1,111 @@
-// Parent class
-class Shape {
-    constructor(name) {
+class Rectangle {
+    constructor(name, height, width) {
         this.name = name;
-    }
-
-    logName() {
-        console.log('Shape name: ', this.name);
-    }
-}
-
-// Sub Class
-class Rectangle extends Shape {
-    constructor(name, width, height) {
-        super(name);
-
         this.height = height;
         this.width = width;
     }
-}
 
-class Circle extends Shape {
-    constructor(name, radius) {
-        super(name);
-
-        this.readius = radius;
+    area() {
+        return this.height * this.width;
     }
 
-    logName() {
-        console.log('Circle Name: ' + this.name)
+    static getClass() {
+        return 'Rectangle';
     }
 }
 
 
+const rect = new Rectangle('Rect', 10, 10);
+console.log(rect.area());
+console.log(Rectangle.getClass());
 
 
-const rect = new Rectangle('Rect 1', 20, 20);
-console.log(rect);
-rect.logName();
 
-const cir = new Circle('Cir 1', 30);
-cir.logName();
 
-console.log(rect instanceof Rectangle);
-console.log(rect instanceof Shape);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Parent class
+// class Shape {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     logName() {
+//         console.log('Shape name: ', this.name);
+//     }
+// }
+
+// // Sub Class
+// class Rectangle extends Shape {
+//     constructor(name, width, height) {
+//         super(name);
+
+//         this.height = height;
+//         this.width = width;
+//     }
+// }
+
+// class Circle extends Shape {
+//     constructor(name, radius) {
+//         super(name);
+
+//         this.readius = radius;
+//     }
+
+//     logName() {
+//         console.log('Circle Name: ' + this.name)
+//     }
+// }
+
+
+
+
+// const rect = new Rectangle('Rect 1', 20, 20);
+// console.log(rect);
+// rect.logName();
+
+// const cir = new Circle('Cir 1', 30);
+// cir.logName();
+
+// console.log(rect instanceof Rectangle);
+// console.log(rect instanceof Shape);
 
 
 
